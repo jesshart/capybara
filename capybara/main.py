@@ -41,7 +41,7 @@ def hello():
     print("Hello, World!")
 
 @app.command()
-def run():
+def run(dry_run: bool = False):
     env_json = yaml.load(fp.read_text(), Loader=yaml.Loader)
     
     dependencies = env_json['dependencies']
@@ -111,7 +111,13 @@ def run():
     package_versions.append({'pip': pip_with_versions})
 
     env_json.update({'dependencies': package_versions})
-    fp.write_text(yaml.dump(env_json, Dumper=yaml.Dumper))
+
+    output_yaml = yaml.dump(env_json, default_flow_style=False, Dumper=yaml.Dumper)
+    
+    if dry_run:
+        console.print(output_yaml)
+    else:
+        fp.write_text(output_yaml)
 
     console.print(f"[bold green]Complete![/bold green]")
     console.print(f"Check {fp.name!r} for the change.")
