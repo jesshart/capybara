@@ -1,8 +1,8 @@
 channels:
-  - conda-forge
-  - defaults
+- conda-forge
+- defaults
 dependencies:
-  - pip
-  - pandas
-  - pip:
-    - ibis-framework
+- pandas=1.5.0
+- pip=22.2.2
+- pip:
+  - ibis-framework==3.2.0

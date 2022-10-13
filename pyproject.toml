@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "swaml"
-version = "0.1.0"
+version = "0.1.1"
 description = "Populates those tedious package versions for your environment.yml."
 authors = ["Your Name <you@example.com>"]
 license = "LICENSE"
