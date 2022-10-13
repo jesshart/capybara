@@ -5,11 +5,11 @@ Populates those tedious package versions for your environment.yml.
 # Installation
 With `pipx`
 ```bash
-pipx install swaml
+$ pipx install swaml
 ```
 With `pip`
 ```bash
-python -m pip install swaml
+$ python -m pip install swaml
 ```
 # How To Use
 Activate the `conda` environment you desire to populate.
@@ -23,5 +23,5 @@ $ ls
 ```
 Run with dry run to be sure of the changes. Otherwise, run without.
 ```bash
-swaml run --dry-run
+$ swaml run --dry-run
 ```
