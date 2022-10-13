@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "capybara"
+version = "0.1.0"
+description = "Populates those tedious package versions for your environment.yml."
+authors = ["Your Name <you@example.com>"]
+license = "LICENSE"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = {extras = ["all"], version = "^0.6.1"}
+pyyaml = "^6.0"
+
+[tool.poetry.scripts]
+capybara = "capybara.main:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

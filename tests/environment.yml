@@ -1,0 +1,8 @@
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pip
+  - pandas
+  - pip:
+    - ibis-framework
