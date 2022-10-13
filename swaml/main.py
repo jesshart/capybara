@@ -122,9 +122,10 @@ def run(dry_run: bool = False):
     )
 
     if dry_run:
+        log.info("Running with --dry-run, no changes expected.")
         console.print(output_yaml)
     else:
         fp.write_text(output_yaml)
+        console.print(f"Check {fp.name!r} for the change.")
 
-    console.print("[bold green]Complete![/bold green]")
-    console.print(f"Check {fp.name!r} for the change.")
+    log.info("Complete!")

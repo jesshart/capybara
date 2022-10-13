@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "capybara"
+name = "swaml"
 version = "0.1.0"
 description = "Populates those tedious package versions for your environment.yml."
 authors = ["Your Name <you@example.com>"]
@@ -12,7 +12,7 @@ typer = {extras = ["all"], version = "^0.6.1"}
 pyyaml = "^6.0"
 
 [tool.poetry.scripts]
-capybara = "capybara.main:app"
+swaml = "swaml.main:app"
 
 [build-system]
 requires = ["poetry-core"]
